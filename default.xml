@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote  name="aosp" fetch="https://android.googlesource.com" review="https://android-review.googlesource.com/" />
-  <default revision="main-kernel-build-2024" remote="aosp" sync-j="4" />
+  <default revision="main-kernel-2026" remote="aosp" sync-j="4" />
 
-  <superproject name="kernel/superproject" remote="aosp" revision="common-android15-6.6" />
+  <superproject name="kernel/superproject" remote="aosp" revision="common-android16-6.12" />
 
   <project path="build/kernel" name="kernel/build" groups="ddk" >
     <linkfile src="kleaf/bazel.sh" dest="tools/bazel" />
@@ -18,10 +18,10 @@
   </project>
   <project path="build/bazel_common_rules" name="platform/build/bazel_common_rules" groups="ddk" />
   <remote  name="arpi" fetch="."/>
-  <project path="common" name="kernel_arpi" revision="arpi15-6.6" remote="arpi" />
+  <project path="common" name="kernel_arpi" revision="arpi16-6.12" remote="arpi" />
   <project path="kernel/tests" name="kernel/tests" />
   <project path="kernel/configs" name="kernel/configs"  />
-  <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" revision="android15-6.6" />
+  <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" revision="android16-6.12" />
   <project path="prebuilts/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86"  clone-depth="1" groups="ddk" />
   <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" clone-depth="1" groups="ddk" />
   <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" clone-depth="1" groups="ddk" />
@@ -33,7 +33,7 @@
   <project path="tools/mkbootimg" name="platform/system/tools/mkbootimg" />
 
   <project path="prebuilts/jdk/jdk11" name="platform/prebuilts/jdk/jdk11"  clone-depth="1" groups="ddk" />
-  <project path="prebuilts/ndk-r26" name="toolchain/prebuilts/ndk/r26" clone-depth="1" groups="ddk" />
+  <project path="prebuilts/ndk-r27" name="toolchain/prebuilts/ndk/r27" clone-depth="1" groups="ddk" />
 
   <project path="external/libcap-ng" name="platform/external/libcap-ng"/>
   <project path="external/libcap" name="platform/external/libcap"/>
